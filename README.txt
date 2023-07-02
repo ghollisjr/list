@@ -60,12 +60,13 @@ with the result being
 The difference ultimately stems from the fact that Lisp lists are a
 union/sum type of cons pairs and the single NULL object, NIL.  Since
 cons pairs are mutable while NIL is immutable, it is fundamentally
-impossible to mutate a cons pair into the empty list.  So, instead of
-mutating the object, Lisp relies on changing the object stored in a
-place rather than the object itself in the specific case of popping
-the last element from a list.  This is a blemish from the perspective
-of a list datatype, but has many advantages from the perspective of
-the entire Lisp language, to the point that it almost never matters.
+impossible to mutate a cons pair into the empty list and vice versa.
+So, instead of mutating the object, Lisp relies on changing the object
+stored in a place rather than the object itself in the specific case
+of popping the last element from a list.  This is a blemish from the
+perspective of a list datatype, but has many advantages from the
+perspective of the entire Lisp language, to the point that it almost
+never matters.
 
 Almost never.
 
